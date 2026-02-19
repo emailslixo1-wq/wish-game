@@ -2,19 +2,18 @@
 import React from 'react';
 import { Tile, TileType } from './types';
 
-const generateRomanticPath = (length: number, seed: number): Tile[] => {
+export const generatePath = (length: number): Tile[] => {
   const path: Tile[] = [];
   path.push({ id: 0, type: TileType.START, label: 'Início' });
   
   for (let i = 1; i < length - 1; i++) {
-    // Rigid rule: every house must have a challenge or trap.
-    const rand = (Math.sin(seed + i) + 1) / 2; // Deterministic random-ish for sync paths
+    const rand = Math.random(); // True random per game
     let type: TileType;
 
-    if (rand < 0.15) type = TileType.TRAP; // "Azar" (Volte casas)
-    else if (rand < 0.25) type = TileType.BONUS; // "Bônus" (Avance)
-    else if (rand < 0.50) type = TileType.HE_PEDE; // Visual only - no label
-    else if (rand < 0.75) type = TileType.SHE_PEDE; // Visual only - no label
+    if (rand < 0.15) type = TileType.TRAP;       // ~15% "Azar" (Volte casas)
+    else if (rand < 0.25) type = TileType.BONUS; // ~10% "Bônus" (Avance)
+    else if (rand < 0.50) type = TileType.HE_PEDE;
+    else if (rand < 0.75) type = TileType.SHE_PEDE;
     else type = TileType.CHALLENGE;
     
     path.push({ id: i, type, label: `${i}` });
@@ -26,7 +25,6 @@ const generateRomanticPath = (length: number, seed: number): Tile[] => {
 
 // Larger path to allow for the "snake" winding visual
 export const PATH_LENGTH = 25;
-export const UNIFIED_PATH = generateRomanticPath(PATH_LENGTH, 789);
 
 export const ICONS = {
   DICE: (

@@ -1,25 +1,51 @@
 
 import React, { useState, useMemo } from 'react';
 import { GameState, TileType, PlayerType } from './types';
-import { UNIFIED_PATH, PATH_LENGTH, ICONS } from './constants';
+import { generatePath, PATH_LENGTH, ICONS } from './constants';
 import TileComponent from './components/TileComponent';
 import Modal from './components/Modal';
 import { generateChallenge } from './services/challengesService';
 
+const randomPlayer = (): PlayerType => Math.random() < 0.5 ? 'MAN' : 'WOMAN';
+
 const App: React.FC = () => {
-  const [state, setState] = useState<GameState>({
-    manPosition: 0,
-    womanPosition: 0,
-    currentTurn: 'MAN',
-    isGameOver: false,
-    winner: null,
-    lastDiceRoll: 0,
-    isRolling: false,
-    isProcessing: false,
-    message: 'Preparem o clima. O Homem joga primeiro.',
-    showModal: false,
-    modalContent: null,
+  // Generate a fresh random path for every new game
+  const [gamePath, setGamePath] = useState(() => generatePath(PATH_LENGTH));
+
+  const [state, setState] = useState<GameState>(() => {
+    const first = randomPlayer();
+    return {
+      manPosition: 0,
+      womanPosition: 0,
+      currentTurn: first,
+      isGameOver: false,
+      winner: null,
+      lastDiceRoll: 0,
+      isRolling: false,
+      isProcessing: false,
+      message: `Sorte decidiu! ${first === 'MAN' ? 'O Homem' : 'A Mulher'} começa. Preparem o clima.`,
+      showModal: false,
+      modalContent: null,
+    };
   });
+
+  const restartGame = () => {
+    const first = randomPlayer();
+    setGamePath(generatePath(PATH_LENGTH));
+    setState({
+      manPosition: 0,
+      womanPosition: 0,
+      currentTurn: first,
+      isGameOver: false,
+      winner: null,
+      lastDiceRoll: 0,
+      isRolling: false,
+      isProcessing: false,
+      message: `Sorte decidiu! ${first === 'MAN' ? 'O Homem' : 'A Mulher'} começa. Preparem o clima.`,
+      showModal: false,
+      modalContent: null,
+    });
+  };
 
   // Layout: A grid that snakes back and forth
   const gridLayout = useMemo(() => {
@@ -106,7 +132,7 @@ const App: React.FC = () => {
 
         // Execute challenge after reaching destination
         setTimeout(async () => {
-          const tile = UNIFIED_PATH[nextPos];
+          const tile = gamePath[nextPos];
           let finalNextPos = nextPos;
           let preMsg = "";
 
@@ -169,7 +195,7 @@ const App: React.FC = () => {
               {row.map((idx, colIdx) => (
                 <TileComponent 
                   key={idx}
-                  tile={UNIFIED_PATH[idx]} 
+                  tile={gamePath[idx]} 
                   isOccupied={{
                     man: state.manPosition === idx,
                     woman: state.womanPosition === idx
@@ -223,7 +249,7 @@ const App: React.FC = () => {
                {state.lastDiceRoll || '—'}
              </div>
              {state.isGameOver && (
-               <button onClick={() => window.location.reload()} className="bg-white text-red-900 p-3 rounded-2xl hover:bg-red-100 shadow-lg">
+               <button onClick={restartGame} className="bg-white text-red-900 p-3 rounded-2xl hover:bg-red-100 shadow-lg">
                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                </button>
              )}
