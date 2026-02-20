@@ -9,11 +9,10 @@ export const generateChallenge = async (player: PlayerType, tileId: number, type
   // Filter by tile type and player
   const pool = asAny.filter((c: any) => {
     if (!c.type || !c.player) return false;
-    
-    // Check if player matches (either specific to player or BOTH)
-    const isPlayerMatch = c.player === player || c.player === 'BOTH';
-    if (!isPlayerMatch) return false;
-    
+
+    // Check if player matches exactly
+    if (c.player !== player) return false;
+
     // Check if tile type matches
     if (desiredType === 'TRAP' && c.type === 'TRAP') return true;
     if (desiredType === 'BONUS' && c.type === 'BONUS') return true;
@@ -21,7 +20,8 @@ export const generateChallenge = async (player: PlayerType, tileId: number, type
     return false;
   });
 
-  const candidates = pool.length > 0 ? pool : asAny.filter((c: any) => c.player === player || c.player === 'BOTH');
+  // Fallback: any challenge for this player if pool is empty
+  const candidates = pool.length > 0 ? pool : asAny.filter((c: any) => c.player === player);
   const chosen = candidates[Math.floor(Math.random() * candidates.length)];
 
   return {

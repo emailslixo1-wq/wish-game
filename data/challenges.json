@@ -1,27 +1,254 @@
 [
-  { "id": 1, "type": "TRAP", "player": "WOMAN", "challenge": "Momento Confissão", "instruction": "Fale em voz quente, quase lambendo o ouvido dele, um fetiche que você ainda não realizou: onde, como e com que velocidade gostaria de ser tocada." },
-  { "id": 2, "type": "BONUS", "player": "MAN", "challenge": "Beijo Surpresa", "instruction": "Beije-a como se fosse a última vez: abra a boca devagar, puxe o lábio inferior com os dentes, depois desça beijando o pescoço." },
-  { "id": 3, "type": "TRAP", "player": "WOMAN", "challenge": "Pergunta Curiosa", "instruction": "Pergunte qual foi o orgasmo mais intenso que já teve — peça que descreva barulho, posição e onde as mãos estavam." },
-  { "id": 4, "type": "BONUS", "player": "MAN", "challenge": "Abraço Sensual", "instruction": "Apertem os corpos até sentir o calor subindo; esfreguem suavemente a virilha um no outro." },
-  { "id": 5, "type": "NEUTRAL", "player": "BOTH", "challenge": "Elogio Criativo", "instruction": "Faça três elogios criativos e específicos ao seu parceiro(a)." },
-  { "id": 6, "type": "NEUTRAL", "player": "BOTH", "challenge": "Dança Sensual", "instruction": "Coloque uma música lenta e dancem abraçados, mantendo contato visual." },
-  { "id": 7, "type": "BONUS", "player": "WOMAN", "challenge": "Sussurro Sensual", "instruction": "Sussurre algo provocante no ouvido dele que faça seu corpo inteiro arrepiar." },
-  { "id": 8, "type": "TRAP", "player": "MAN", "challenge": "Desafio do Sussurro", "instruction": "Sussurre exatamente onde quer sentir a língua dela — use todos os detalhes de pressão e velocidade." },
-  { "id": 9, "type": "NEUTRAL", "player": "BOTH", "challenge": "Jogo de Memória", "instruction": "Relembrem o primeiro beijo que trocaram; reproduzam a mesma intensidade." },
-  { "id": 10, "type": "BONUS", "player": "WOMAN", "challenge": "Massagem Provocante", "instruction": "Massageie o peito e o abdômen dele durante 1 minuto, aumentando a sensualidade." },
-  { "id": 11, "type": "TRAP", "player": "MAN", "challenge": "Verdade Rápida", "instruction": "Responda de imediato: Qual posição te faz gozar mais rápido e por quê?" },
-  { "id": 12, "type": "NEUTRAL", "player": "BOTH", "challenge": "Lista de Desejos", "instruction": "Cada um fala um fetiche que ainda não realizaram juntos." },
-  { "id": 13, "type": "BONUS", "player": "MAN", "challenge": "Beijo Intenso", "instruction": "Beije os seios dela como se sua vida dependesse disso." },
-  { "id": 14, "type": "TRAP", "player": "WOMAN", "challenge": "Sedução Roçada", "instruction": "Esfregue os seios no rosto dele enquanto sussurra algo provocante." },
-  { "id": 15, "type": "BONUS", "player": "WOMAN", "challenge": "Provocação Verbal", "instruction": "Diga para ele: Hoje quero seus dedos dentro de mim enquanto você me beija." },
-  { "id": 16, "type": "NEUTRAL", "player": "BOTH", "challenge": "Qualidades Sedutoras", "instruction": "Cada um nomeia uma qualidade física que mais atrai no outro e toca esse local." },
-  { "id": 17, "type": "BONUS", "player": "MAN", "challenge": "Massagem Sensual", "instruction": "Faça uma massagem demorada nas costas, depois nas coxas dela." },
-  { "id": 18, "type": "BONUS", "player": "MAN", "challenge": "Carícia Provocante", "instruction": "Beije a parte interna das coxas dela lentamente." },
-  { "id": 19, "type": "NEUTRAL", "player": "BOTH", "challenge": "Playlist Sensual", "instruction": "Escolham uma música sensual e dancem colados, sem pressa." },
-  { "id": 20, "type": "TRAP", "player": "WOMAN", "challenge": "Proximidade Provocante", "instruction": "Chegue por trás dele, coloque a mão no seu peito e sussurre: Você é meu." },
-  { "id": 21, "type": "TRAP", "player": "MAN", "challenge": "Dança Proibida", "instruction": "Peça que ela sente no seu colo e dance sensualmente." },
-  { "id": 22, "type": "NEUTRAL", "player": "BOTH", "challenge": "Verdades Obscuras", "instruction": "Façam perguntas sobre desejos e fantasias que vocês gostariam de realizar juntos." },
-  { "id": 23, "type": "TRAP", "player": "WOMAN", "challenge": "Cumprimento Ousado", "instruction": "Cumprimente-o com um beijo longo e profundo no pescoço." },
-  { "id": 24, "type": "TRAP", "player": "MAN", "challenge": "Toque Inusitado", "instruction": "Toque dela nos locais sensíveis, sussurrando um elogio sensual." },
-  { "id": 25, "type": "BONUS", "player": "WOMAN", "challenge": "Demonstração", "instruction": "Mostre exatamente como gosta de ser beijada, guiando os lábios dele." }
+  {
+    "id": 1,
+    "type": "TRAP",
+    "player": "WOMAN",
+    "challenge": "Momento Confissão",
+    "instruction": "Fale em voz quente, quase lambendo o ouvido dele, um fetiche que você ainda não realizou: onde, como e com que velocidade gostaria de ser tocada."
+  },
+  {
+    "id": 2,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Beijo Surpresa",
+    "instruction": "Beije-a como se fosse a última vez: abra a boca devagar, puxe o lábio inferior com os dentes, depois desça beijando o pescoço."
+  },
+  {
+    "id": 3,
+    "type": "TRAP",
+    "player": "WOMAN",
+    "challenge": "Pergunta Curiosa",
+    "instruction": "Pergunte qual foi o orgasmo mais intenso que já teve — peça que descreva barulho, posição e onde as mãos estavam."
+  },
+  {
+    "id": 4,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Abraço Sensual",
+    "instruction": "Apertem os corpos até sentir o calor subindo; esfreguem suavemente a virilha um no outro."
+  },
+  {
+    "id": 7,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Sussurro Sensual",
+    "instruction": "Sussurre algo provocante no ouvido dele que faça seu corpo inteiro arrepiar."
+  },
+  {
+    "id": 8,
+    "type": "TRAP",
+    "player": "MAN",
+    "challenge": "Desafio do Sussurro",
+    "instruction": "Sussurre exatamente onde quer sentir a língua dela — use todos os detalhes de pressão e velocidade."
+  },
+  {
+    "id": 10,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Massagem Provocante",
+    "instruction": "Massageie o peito e o abdômen dele durante 1 minuto, aumentando a sensualidade."
+  },
+  {
+    "id": 11,
+    "type": "TRAP",
+    "player": "MAN",
+    "challenge": "Verdade Rápida",
+    "instruction": "Responda de imediato: Qual posição te faz gozar mais rápido e por quê?"
+  },
+  {
+    "id": 13,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Beijo Intenso",
+    "instruction": "Beije os seios dela como se sua vida dependesse disso."
+  },
+  {
+    "id": 14,
+    "type": "TRAP",
+    "player": "WOMAN",
+    "challenge": "Sedução Roçada",
+    "instruction": "Esfregue os seios no rosto dele enquanto sussurra algo provocante."
+  },
+  {
+    "id": 15,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Provocação Verbal",
+    "instruction": "Diga para ele: Hoje quero seus dedos dentro de mim enquanto você me beija."
+  },
+  {
+    "id": 17,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Massagem Sensual",
+    "instruction": "Faça uma massagem demorada nas costas, depois nas coxas dela."
+  },
+  {
+    "id": 18,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Carícia Provocante",
+    "instruction": "Beije a parte interna das coxas dela lentamente."
+  },
+  {
+    "id": 20,
+    "type": "TRAP",
+    "player": "WOMAN",
+    "challenge": "Proximidade Provocante",
+    "instruction": "Chegue por trás dele, coloque a mão no seu peito e sussurre: Você é meu."
+  },
+  {
+    "id": 21,
+    "type": "TRAP",
+    "player": "MAN",
+    "challenge": "Dança Proibida",
+    "instruction": "Peça que ela sente no seu colo e dance sensualmente."
+  },
+  {
+    "id": 23,
+    "type": "TRAP",
+    "player": "WOMAN",
+    "challenge": "Cumprimento Ousado",
+    "instruction": "Cumprimente-o com um beijo longo e profundo no pescoço."
+  },
+  {
+    "id": 24,
+    "type": "TRAP",
+    "player": "MAN",
+    "challenge": "Toque Inusitado",
+    "instruction": "Toque dela nos locais sensíveis, sussurrando um elogio sensual."
+  },
+  {
+    "id": 25,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Demonstração",
+    "instruction": "Mostre exatamente como gosta de ser beijada, guiando os lábios dele."
+  },
+  {
+    "id": 26,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Virada Sensual",
+    "instruction": "Vire-a de costas e beije sua nuca devagar."
+  },
+  {
+    "id": 27,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Beijo Sensitivo",
+    "instruction": "Beije-a na boca, esfregando-se contra ela."
+  },
+  {
+    "id": 28,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Massagem Pretenciosa",
+    "instruction": "Tire o sutiã dela e massagei os seios sem pressa nenhuma."
+  },
+  {
+    "id": 29,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Dedos na Boca",
+    "instruction": "Chupe os dedos da mão dela, um por um, lambendo devagar."
+  },
+  {
+    "id": 30,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Beijo Delicado",
+    "instruction": "Beije-a delicadamente no rosto todo, deixando a boca por último."
+  },
+  {
+    "id": 31,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Mordidinhas Soft",
+    "instruction": "Dê mordidinhas de leve ao redor dos quadris dela e continue barriga acima."
+  },
+  {
+    "id": 32,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Brisa de Eros",
+    "instruction": "Assopre a vagina dela e dê leves lambidas."
+  },
+  {
+    "id": 33,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Dedos Ousados",
+    "instruction": "Beije-a na boca e introduza o dedo na vagina dela."
+  },
+  {
+    "id": 34,
+    "type": "BONUS",
+    "player": "MAN",
+    "challenge": "Chupada Lenta",
+    "instruction": "Faça sexo oral nela sem pressa."
+  },
+  {
+    "id": 35,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Esquentando o Clima",
+    "instruction": "Tire a própria blusa devagar, olhando nos olhos dele."
+  },
+  {
+    "id": 36,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Hora do Show",
+    "instruction": "Faça um strip-tease, ficando apenas de calcinha e sutiã."
+  },
+  {
+    "id": 37,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Sedução no Colo",
+    "instruction": "Sente no colo dele e dance sensualmente, impedindo que ele toque em você."
+  },
+  {
+    "id": 38,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Arranhão Erótico",
+    "instruction": "Deixe-o só de cueca e arranhe as costas dele."
+  },
+  {
+    "id": 39,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Corpo Quente",
+    "instruction": "Completamente nua, deite-se sobre ele, pressionando seu corpo contra o dele."
+  },
+  {
+    "id": 40,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Aperto Provocante",
+    "instruction": "Aperte levemente os testículos dele enquanto beija seu corpo."
+  },
+  {
+    "id": 41,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Massagem Erótica",
+    "instruction": "Massageie o períneo dele, aquele ponto entre os testículos e o ânus."
+  },
+  {
+    "id": 42,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Seios na Madeira",
+    "instruction": "Esfregue os seios no pênis dele."
+  },
+  {
+    "id": 43,
+    "type": "BONUS",
+    "player": "WOMAN",
+    "challenge": "Flor Molhada",
+    "instruction": "Esfregue a vagina molhada no pênis dele."
+  }
 ]
