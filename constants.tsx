@@ -24,7 +24,7 @@ export const generatePath = (length: number): Tile[] => {
 };
 
 // Larger path to allow for the "snake" winding visual
-export const PATH_LENGTH = 25;
+export const PATH_LENGTH = 40;
 
 export const ICONS = {
   DICE: (

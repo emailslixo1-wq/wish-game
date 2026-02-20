@@ -49,7 +49,7 @@ const App: React.FC = () => {
 
   // Layout: A grid that snakes back and forth
   const gridLayout = useMemo(() => {
-    const cols = 5;
+    const cols = 8;
     const rows = Math.ceil(PATH_LENGTH / cols);
     const layout = [];
 
@@ -188,10 +188,10 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-red-950/40 p-3 md:p-6 rounded-[2rem] border-4 border-red-900/50 shadow-2xl relative">
-        <div className="grid grid-cols-1 gap-3 md:gap-4">
+      <div className="bg-red-950/40 p-2 md:p-4 rounded-[2rem] border-4 border-red-900/50 shadow-2xl relative">
+        <div className="grid grid-cols-1 gap-1 md:gap-2">
           {gridLayout.map((row, rIdx) => (
-            <div key={rIdx} className="grid grid-cols-5 gap-3 md:gap-4">
+            <div key={rIdx} className="grid grid-cols-8 gap-1 md:gap-2">
               {row.map((idx, colIdx) => (
                 <TileComponent 
                   key={idx}

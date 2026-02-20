@@ -57,7 +57,7 @@ const TileComponent: React.FC<TileComponentProps> = ({ tile, isOccupied, rowInde
   }
 
   const ArrowIcon = () => {
-    const iconClass = "w-5 h-5 opacity-60";
+    const iconClass = "w-3 h-3 opacity-60";
     if (arrowDirection === 'right') {
       return (
         <svg className={iconClass} fill="currentColor" viewBox="0 0 24 24">
@@ -101,33 +101,35 @@ const TileComponent: React.FC<TileComponentProps> = ({ tile, isOccupied, rowInde
 
       {/* Content layer */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-        <span className="text-sm md:text-base font-black text-center">
+        <span className="text-[9px] md:text-xs font-black text-center leading-tight">
           {getLabel()}
         </span>
         
         {showNumber && (
-          <span className="text-xs md:text-sm font-bold text-center opacity-75">
+          <span className="text-[7px] md:text-[10px] font-bold text-center opacity-75">
             #{tile.label}
           </span>
         )}
       </div>
 
-      {/* Direction arrow */}
-      <div className="absolute bottom-1 right-1 text-white z-10">
-        <ArrowIcon />
-      </div>
+      {/* Direction arrow — hidden on FINISH tile */}
+      {tile.type !== TileType.FINISH && (
+        <div className="absolute bottom-1 right-1 text-white z-10">
+          <ArrowIcon />
+        </div>
+      )}
       
       {/* Man player indicator */}
       {isOccupied.man && (
-        <div className="absolute top-0 left-0 w-10 h-10 rounded-full bg-blue-500 border-3 border-white flex items-center justify-center z-20 shadow-2xl animate-bounce shadow-blue-500/80 ring-2 ring-white ring-offset-1">
-          <span className="text-sm text-white font-black">H</span>
+        <div className="absolute top-0 left-0 w-5 h-5 rounded-full bg-blue-500 border border-white flex items-center justify-center z-20 shadow-lg animate-bounce shadow-blue-500/80 ring-1 ring-white">
+          <span className="text-[8px] text-white font-black">H</span>
         </div>
       )}
       
       {/* Woman player indicator */}
       {isOccupied.woman && (
-        <div className="absolute top-0 right-0 w-10 h-10 rounded-full bg-pink-500 border-3 border-white flex items-center justify-center z-20 shadow-2xl animate-bounce shadow-pink-500/80 ring-2 ring-white ring-offset-1">
-          <span className="text-sm text-white font-black">M</span>
+        <div className="absolute top-0 right-0 w-5 h-5 rounded-full bg-pink-500 border border-white flex items-center justify-center z-20 shadow-lg animate-bounce shadow-pink-500/80 ring-1 ring-white">
+          <span className="text-[8px] text-white font-black">M</span>
         </div>
       )}
     </div>
