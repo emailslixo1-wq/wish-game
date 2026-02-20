@@ -10,40 +10,43 @@ interface TileComponentProps {
   rowLength: number;
 }
 
+const TILE_IMAGES: Partial<Record<TileType, string>> = {
+  [TileType.TRAP]:      '/tiles/tile_trap.png',
+  [TileType.BONUS]:     '/tiles/tile_bonus.png',
+  [TileType.HE_PEDE]:   '/tiles/tile_he.png',
+  [TileType.SHE_PEDE]:  '/tiles/tile_she.png',
+  [TileType.CHALLENGE]: '/tiles/tile_neutral.png',
+  [TileType.START]:     '/tiles/tile_neutral.png',
+  [TileType.FINISH]:    '/tiles/tile_neutral.png',
+};
+
 const TileComponent: React.FC<TileComponentProps> = ({ tile, isOccupied, rowIndex, colIndex, rowLength }) => {
   const getStyle = () => {
-    // Shared types
     if (tile.type === TileType.START) return 'bg-emerald-600 border-emerald-400 text-white';
     if (tile.type === TileType.FINISH) return 'bg-slate-900 border-white text-white font-black';
-    
-    // Neutral color scheme for unified track
     switch (tile.type) {
-      case TileType.TRAP: return 'bg-rose-900 border-rose-400 text-rose-100';
-      case TileType.BONUS: return 'bg-amber-600 border-amber-300 text-white';
-      case TileType.HE_PEDE: return 'bg-blue-600 border-blue-300 text-white';
+      case TileType.TRAP:     return 'bg-rose-900 border-rose-400 text-rose-100';
+      case TileType.BONUS:    return 'bg-amber-600 border-amber-300 text-white';
+      case TileType.HE_PEDE:  return 'bg-blue-600 border-blue-300 text-white';
       case TileType.SHE_PEDE: return 'bg-purple-600 border-purple-300 text-white';
-      case TileType.CHALLENGE: return 'bg-gray-800 border-gray-600 text-gray-200';
-      default: return 'bg-gray-800 border-gray-600 text-gray-200';
+      case TileType.CHALLENGE:return 'bg-gray-800 border-gray-600 text-gray-200';
+      default:                return 'bg-gray-800 border-gray-600 text-gray-200';
     }
   };
 
   const getLabel = () => {
     switch(tile.type) {
-      case TileType.TRAP: return 'VOLTE 2';
-      case TileType.BONUS: return 'BÔNUS';
-      case TileType.START: return 'INÍCIO';
+      case TileType.TRAP:   return 'VOLTE 2';
+      case TileType.BONUS:  return 'BÔNUS';
+      case TileType.START:  return 'INÍCIO';
       case TileType.FINISH: return 'FIM';
-      default: return null;
+      default:              return null;
     }
   };
 
   const showNumber = ![TileType.START, TileType.FINISH].includes(tile.type);
   
-  // Determine arrow direction
-  // Quina (corner) is where the row transitions to the next line
   const isReverseRow = rowIndex % 2 !== 0;
-  // For normal rows: quina is at the end (last column)
-  // For reverse rows: quina is at the start (first column after reverse)
   const isCorner = isReverseRow ? colIndex === 0 : colIndex === rowLength - 1;
   
   let arrowDirection = 'right';
@@ -55,7 +58,6 @@ const TileComponent: React.FC<TileComponentProps> = ({ tile, isOccupied, rowInde
 
   const ArrowIcon = () => {
     const iconClass = "w-5 h-5 opacity-60";
-    
     if (arrowDirection === 'right') {
       return (
         <svg className={iconClass} fill="currentColor" viewBox="0 0 24 24">
@@ -80,22 +82,38 @@ const TileComponent: React.FC<TileComponentProps> = ({ tile, isOccupied, rowInde
     return null;
   };
 
+  const bgImage = TILE_IMAGES[tile.type];
+
   return (
     <div className={`relative w-full aspect-square flex flex-col items-center justify-center border-2 rounded-lg shadow-inner transition-all duration-500 ${getStyle()}`}>
-      {/* Main tile label */}
-      <span className="text-sm md:text-base font-black text-center">
-        {getLabel()}
-      </span>
       
-      {/* Tile number for special tiles */}
-      {showNumber && (
-        <span className="text-xs md:text-sm font-bold text-center opacity-75">
-          #{tile.label}
-        </span>
+      {/* Sensual background image */}
+      {bgImage && (
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            opacity: 0.18,
+            mixBlendMode: 'luminosity',
+          }}
+        />
       )}
-      
+
+      {/* Content layer */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+        <span className="text-sm md:text-base font-black text-center">
+          {getLabel()}
+        </span>
+        
+        {showNumber && (
+          <span className="text-xs md:text-sm font-bold text-center opacity-75">
+            #{tile.label}
+          </span>
+        )}
+      </div>
+
       {/* Direction arrow */}
-      <div className="absolute bottom-1 right-1 text-white">
+      <div className="absolute bottom-1 right-1 text-white z-10">
         <ArrowIcon />
       </div>
       
